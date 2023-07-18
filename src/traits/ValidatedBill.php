@@ -4,6 +4,7 @@ namespace Src\traits;
 
 trait ValidatedBill
 {
+    /** Considerando apenas as notas existentes no real Brasileiro */
     private array $aceeptedBills = [200, 100, 50, 20, 10, 5, 2];
 
     public function validatedBill(int $value): self

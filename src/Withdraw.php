@@ -15,7 +15,7 @@ class Withdraw
     /**
      * Return the quantity of bills
      *
-     * @param int $value
+     * @param int $value // Considerei o valor int pois geralmente não se usa centavos em saques de caixas eletrônicos
      * @return array
      */
     public function ammount(int $value): array

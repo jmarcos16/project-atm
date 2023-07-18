@@ -16,7 +16,7 @@ class Bill
         return $this;
     }
 
-    public function getBill()
+    public function getBill() : array
     {
         return $this->bill;
     }
