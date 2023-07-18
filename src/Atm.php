@@ -8,7 +8,6 @@ use Src\Withdraw;
 class Atm
 {
     private Bill $bill;
-    private Withdraw $withdraw;
 
     public function __construct()
     {

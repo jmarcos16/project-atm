@@ -4,7 +4,7 @@ namespace Src\traits;
 
 trait ValidatedBill
 {
-    private array $aceeptedBills = [100, 50, 20, 10, 5, 2];
+    private array $aceeptedBills = [200, 100, 50, 20, 10, 5, 2];
 
     public function validatedBill(int $value): self
     {
