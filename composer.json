@@ -13,5 +13,8 @@
             "name": "Zé Marcos",
             "email": "contato.marcosrf@gmail.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
 }
