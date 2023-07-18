@@ -5,8 +5,6 @@ namespace Tests;
 use Src\Atm;
 use PHPUnit\Framework\TestCase;
 
-use function PHPUnit\Framework\assertTrue;
-
 class AtmTest extends TestCase
 {
     /** @test */
@@ -66,6 +64,16 @@ class AtmTest extends TestCase
         $this->assertEquals(1, $result[100]);
         $this->assertEquals(1, $result[50]);
         $this->assertEquals(1, $result[20]);
+    }
+
+    /** @test */
+    public function validated_if_value_withdraw_is_valid()
+    {
+        $atm = new Atm();
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Não é possível sacar este valor');
+        $atm->bill()->addBill(100)->addBill(50)->addBill(20);
+        $atm->withdraw()->ammount(1705);
     }
 
 }
