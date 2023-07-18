@@ -1,0 +1,17 @@
+{
+    "name": "vendor/atm",
+    "require": {
+        "symfony/var-dumper": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Atm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Zé Marcos",
+            "email": "contato.marcosrf@gmail.com"
+        }
+    ]
+}
