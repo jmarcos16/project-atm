@@ -11,7 +11,7 @@ trait ValidatedBill
         if (!in_array($value, $this->aceeptedBills)) {
             throw new \Exception('Nota inválida');
         }
-
+        
         if (in_array($value, $this->getBill())) {
             throw new \Exception('Nota já adicionada');
         }

@@ -56,4 +56,16 @@ class AtmTest extends TestCase
         $this->expectExceptionMessage('Nota já adicionada');
         $atm->bill()->addBill(100);
     }
+
+    /** @test */
+    public function it_should_be_able_withdraw()
+    {
+        $atm = new Atm();
+        $atm->bill()->addBill(100)->addBill(50)->addBill(20);
+        $result = $atm->withdraw()->ammount(170);
+        $this->assertEquals(1, $result[100]);
+        $this->assertEquals(1, $result[50]);
+        $this->assertEquals(1, $result[20]);
+    }
+
 }

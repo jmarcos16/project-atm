@@ -27,12 +27,14 @@ class Withdraw
         rsort($bill);
 
         foreach ($bill as $b) {
-            $quantity = floor($value / $b);
+
+            $quantity = intdiv($value, $b);
             if ($quantity > 0) {
                 $this->withdraw[$b] = $quantity;
                 $value -= $quantity * $b;
             }
         }
+
         if ($value > 0) {
             throw new \Exception('Não é possível sacar este valor');
         }
