@@ -20,7 +20,7 @@ O objetivo deste projeto é simular o cálculo da contagem de cédulas de um cai
 
   composer install
 
-  php -S locahost:8000
+  php -S localhost:8000
 ```
 
 
